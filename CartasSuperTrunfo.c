@@ -38,7 +38,7 @@ int main() {
     printf("Pontos Turistícos: ");
     scanf("%d", &pontos1);
     printf("\n");
-
+    
     //coleta de dados da segunda carta
     printf("Carta 2:\n");
     printf("Estado: ");
@@ -74,9 +74,28 @@ int main() {
     printf("Estado: %c\n", estado2);
     printf("Código: %s\n", codigo2);
     printf("Nome da Cidade: %s\n", cidade2);
-    printf("População: %d\n",5 populacao2);
+    printf("População: %d\n", populacao2);
     printf("Área: %.2f km² \n", area2);
     printf("PIB: %.2f bilhões de reais\n", pib2);
     printf("Pontos Turísticos: %d\n", pontos2);
+    
+    
+    //variaveis de comparacao
+    float densidade1 = populacao1/area1;
+    float densidade2 = populacao2/area2;
+    float pibPerCapta1 = populacao1/pib1;
+    float pibPerCapta2 = populacao2/pib2;
+
+    if(pibPerCapta1 > pibPerCapta2){
+        printf("%c %.2f\n", &cidade1, &pibPerCapta1);
+        printf("%c %.2f\n", &cidade2, &pibPerCapta2);
+        printf("Resultado: Carta 1(%c)", &cidade1);
+    } else{
+        printf("%c %.2f\n", &cidade1, &pibPerCapta1);
+        printf("%c %.2f\n", &cidade2, &pibPerCapta2);
+        printf("Resultado: Carta 2(%c)", &cidade2);
+    }
+
+
     return 0;
 }
